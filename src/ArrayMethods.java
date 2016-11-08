@@ -66,13 +66,14 @@ public class ArrayMethods {
 	}
 	public int findSecondLargest(){
 		int largest = values[0];
-		int largest2 = values[0];
+		int largest2 = values[1];
 		for (int n = 1; n < values.length; n++){
 			if (values[n] > largest){
 				largest = values[n];
+				largest2 = values[n - 1];
 			}
 		}
-		for (int n = 1; n < values.length; n++){
+		for (int n = 0; n < values.length; n++){
 			if (values[n] > largest2 && values[n] < largest){
 				largest2 = values[n];
 			}
